@@ -1,0 +1,9 @@
+
+#start redis with
+sudo service redis-server start
+
+#start celery worker
+celery -A make_celery worker --loglevel info -E
+
+#start flask app
+flask --app app run
